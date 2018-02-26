@@ -19,6 +19,7 @@ class PhraseTableViewController : BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "PhraseTableCell", bundle: nil), forCellReuseIdentifier: "PhraseTableCell")
+        self.tableView.separatorInset = UIEdgeInsets.zero
     }
     
     override func didReceiveMemoryWarning() {
@@ -40,7 +41,32 @@ extension PhraseTableViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let phrase = appDelegate.phraseList.phraseList[indexPath.row]
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "PhraseTableCell", for: indexPath) as! PhraseTableCell
-        cell.phraseLabel.text = phrase.phrase
+        
+        if phrase.category == "挨拶" {
+            cell.categoryLabel.text = "挨拶"
+            cell.categoryImage.image = UIImage(named:"greenCircle.png")
+        }
+        else if phrase.category == "ビジネス" {
+            cell.categoryLabel.text = "ビジネス"
+            cell.categoryImage.image = UIImage(named:"purpleCircle.png")
+        }
+        else if phrase.category == "喜び" {
+            cell.categoryLabel.text = "喜び"
+            cell.categoryImage.image = UIImage(named:"orangeCircle.png")
+        }
+        else if phrase.category == "悲しみ" {
+            cell.categoryLabel.text = "悲しみ"
+            cell.categoryImage.image = UIImage(named:"blueCircle.png")
+        }
+        else if phrase.category == "怒り" {
+            cell.categoryLabel.text = "怒り"
+            cell.categoryImage.image = UIImage(named:"redCircle.png")
+        }
+        else if phrase.category == "その他" {
+            cell.categoryLabel.text = "その他"
+            cell.categoryImage.image = UIImage(named:"yellowCircle.png")
+        }
+        cell.phrase.text = phrase.phrase
         return cell
     }
     

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,48 +20,45 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SOt-2i-oxK">
-                        <rect key="frame" x="8" y="11" width="38" height="22"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日常会話" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9i-3W-jSZ">
-                                <rect key="frame" x="0.0" y="1" width="38" height="20"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.94070095486111116" green="0.11173502604166667" blue="0.10584852430555555" alpha="1" colorSpace="calibratedRGB"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenCircle.png" translatesAutoresizingMaskIntoConstraints="NO" id="eKr-bu-a1n">
+                        <rect key="frame" x="10" y="16" width="14" height="14"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="u9i-3W-jSZ" secondAttribute="trailing" id="1dZ-bj-UWo"/>
-                            <constraint firstAttribute="bottom" secondItem="u9i-3W-jSZ" secondAttribute="bottom" constant="1" id="2vh-2l-tOx"/>
-                            <constraint firstItem="u9i-3W-jSZ" firstAttribute="top" secondItem="SOt-2i-oxK" secondAttribute="top" constant="1" id="7Ak-A8-sZb"/>
-                            <constraint firstAttribute="width" constant="38" id="XZ1-Tp-8VJ"/>
-                            <constraint firstAttribute="height" constant="22" id="o6u-N7-aTe"/>
-                            <constraint firstItem="u9i-3W-jSZ" firstAttribute="leading" secondItem="SOt-2i-oxK" secondAttribute="leading" id="xXL-4B-m6r"/>
+                            <constraint firstAttribute="width" secondItem="eKr-bu-a1n" secondAttribute="height" multiplier="1:1" id="1Hc-w8-NUy"/>
+                            <constraint firstAttribute="height" constant="14" id="HO9-KY-chu"/>
+                            <constraint firstAttribute="width" constant="14" id="Qvj-kp-Dd9"/>
                         </constraints>
-                    </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvl-Fv-iaH">
-                        <rect key="frame" x="51" y="11" width="37.5" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="挨拶" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpo-hC-vfo">
+                        <rect key="frame" x="38" y="4" width="20.5" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3WO-bf-AGd">
+                        <rect key="frame" x="38" y="19" width="35.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="SOt-2i-oxK" secondAttribute="bottom" constant="11" id="0DO-hM-ieO"/>
-                    <constraint firstItem="rvl-Fv-iaH" firstAttribute="leading" secondItem="SOt-2i-oxK" secondAttribute="trailing" constant="5" id="6oJ-9v-3eV"/>
-                    <constraint firstItem="SOt-2i-oxK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Gbk-kw-5r3"/>
-                    <constraint firstItem="rvl-Fv-iaH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="Iel-Dg-Nsm"/>
-                    <constraint firstItem="SOt-2i-oxK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="qfc-Jj-fUx"/>
-                    <constraint firstAttribute="bottom" secondItem="rvl-Fv-iaH" secondAttribute="bottom" constant="11" id="vJk-t9-U9r"/>
+                    <constraint firstItem="3WO-bf-AGd" firstAttribute="leading" secondItem="cpo-hC-vfo" secondAttribute="leading" id="BXa-tZ-6rr"/>
+                    <constraint firstItem="3WO-bf-AGd" firstAttribute="top" secondItem="cpo-hC-vfo" secondAttribute="bottom" constant="3" id="KFz-bn-TyW"/>
+                    <constraint firstItem="eKr-bu-a1n" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="n0K-Sb-r7z"/>
+                    <constraint firstItem="eKr-bu-a1n" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="ttD-X9-DBk"/>
+                    <constraint firstItem="cpo-hC-vfo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="uxN-US-Hg5"/>
+                    <constraint firstItem="3WO-bf-AGd" firstAttribute="leading" secondItem="eKr-bu-a1n" secondAttribute="trailing" constant="14" id="wwy-Wc-4ID"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="categoryLabel" destination="u9i-3W-jSZ" id="OHW-NL-ufZ"/>
-                <outlet property="categoryView" destination="SOt-2i-oxK" id="pzK-Tx-gxm"/>
-                <outlet property="phraseLabel" destination="rvl-Fv-iaH" id="a59-ff-rb7"/>
+                <outlet property="categoryImage" destination="eKr-bu-a1n" id="C6q-dN-gpV"/>
+                <outlet property="categoryLabel" destination="cpo-hC-vfo" id="5kf-aT-P8H"/>
+                <outlet property="phrase" destination="3WO-bf-AGd" id="XNd-2P-Lzg"/>
             </connections>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="greenCircle.png" width="250" height="250"/>
+    </resources>
 </document>

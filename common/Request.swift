@@ -154,7 +154,7 @@ class Request {
                             if let httpURLResponse = res as? HTTPURLResponse {
                                 self.responseCode = httpURLResponse.statusCode
                             }
-                            print("CXDRequest.sendRequest:HttpStatus(エラー):\(self.responseCode)")
+                            print("Request.sendRequest:HttpStatus(エラー):\(self.responseCode)")
                         }
                     } else {
                         if let httpURLResponse = res as? HTTPURLResponse {

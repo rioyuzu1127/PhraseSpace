@@ -26,7 +26,7 @@
                                     <constraint firstAttribute="width" secondItem="dBr-8C-7Vy" secondAttribute="height" multiplier="160:133" id="bIv-3V-ES3"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PhraseSpace.png" translatesAutoresizingMaskIntoConstraints="NO" id="U06-QS-9vv">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash.png" translatesAutoresizingMaskIntoConstraints="NO" id="U06-QS-9vv">
                                 <rect key="frame" x="16" y="266" width="288" height="69"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="U06-QS-9vv" secondAttribute="height" multiplier="96:23" id="X4I-Tn-0Cm"/>
@@ -51,6 +51,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="PhraseSpace.png" width="389" height="83"/>
+        <image name="splash.png" width="387" height="72"/>
     </resources>
 </document>

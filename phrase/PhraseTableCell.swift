@@ -10,9 +10,10 @@ import UIKit
 
 class PhraseTableCell: UITableViewCell {
 
-    @IBOutlet weak var categoryView: UIView!
+    @IBOutlet weak var categoryImage: UIImageView!
     @IBOutlet weak var categoryLabel: UILabel!
-    @IBOutlet weak var phraseLabel: UILabel!
+    @IBOutlet weak var phrase: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
