@@ -1,20 +1,15 @@
 //
-//  PhraseTableViewCell.swift
+//  DetailViewCell.swift
 //  PhraseSpace
 //
-//  Created by 井草俊輔 on 2018/02/20.
+//  Created by 井草俊輔 on 2018/03/02.
 //  Copyright © 2018年 井草俊輔. All rights reserved.
 //
 
 import UIKit
 
-class PhraseTableCell: UITableViewCell {
+class DetailViewCell: UITableViewCell {
 
-    @IBOutlet weak var categoryImage: UIImageView!
-    @IBOutlet weak var categoryLabel: UILabel!
-    @IBOutlet weak var phrase: UILabel!
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -22,7 +17,8 @@ class PhraseTableCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
     }
-    
     
 }

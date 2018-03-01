@@ -12,18 +12,16 @@ class SplashViewController : BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.callProcess()
+        callProcess()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        self.showGlobal()
-    }
-    
-    func showGlobal() {
-        self.showView(ViewId.phraseTable, animation: true)
+    override func finishCallApi() {
+        DispatchQueue.main.async {
+            self.showView(ViewId.phraseTable, animation: true)
+        }
     }
 }

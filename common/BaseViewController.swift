@@ -106,11 +106,11 @@ class BaseViewController: UIViewController {
             let jsonData = request?.accessresponseData!.data(using: String.Encoding.utf8)
             do {
                 if let jsonDic = try JSONSerialization.jsonObject(with: jsonData!, options: .mutableContainers) as? NSMutableDictionary {
-                    //let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
                     // 成功時の処理
                     switch request!.accesstype {
                     case .get_Phrase:
                         self.parsePhrase(jsonDic)
+                        self.finishCallApi()
                     }
                 }
             } catch {
@@ -120,6 +120,12 @@ class BaseViewController: UIViewController {
             
         })
     }
+    
+    // 通信が終わった後に来る処理
+    func finishCallApi() {
+
+    }
+    
     
     func parsePhrase(_ jsonObject:NSDictionary) {
         let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate

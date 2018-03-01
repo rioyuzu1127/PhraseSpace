@@ -10,14 +10,19 @@ import UIKit
 
 class PhraseDetailViewController : BaseViewController {
     
-    @IBOutlet weak var detailView: UIView!
+    @IBOutlet weak var naviView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    @IBAction func dismissView(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
 }
