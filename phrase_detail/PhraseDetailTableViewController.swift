@@ -10,6 +10,8 @@ import UIKit
 
 class PhraseDetailTableViewController : UITableViewController {
     
+    let appDelegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -32,6 +34,18 @@ class PhraseDetailTableViewController : UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DetailViewCell", for: indexPath) as! DetailViewCell
+        if indexPath.row == 0 {
+            cell.themeLabel.text = "フレーズ"
+            cell.phraseLabel.text = PreferenceKey.Phrase.getValue() as? String
+        }
+        else if indexPath.row == 1 {
+            cell.themeLabel.text = "カテゴリー"
+            cell.phraseLabel.text = PreferenceKey.Category.getValue() as? String
+        }
+        else {
+            cell.themeLabel.text = "意味・概要"
+            cell.phraseLabel.text = PreferenceKey.OverView.getValue() as? String
+        }
         return cell
     }
 }

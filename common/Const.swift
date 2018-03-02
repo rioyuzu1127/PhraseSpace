@@ -12,7 +12,7 @@ import Foundation
 class Const {
     
     // API基準URL（疎通確認用環境）
-    static let BASE_URL = "https://api.paycierge.com/cardxdrive/dev/v1"
+    static let BASE_URL = ""
     
     static let CONTENT_TYPE = "application/json; charset=UTF-8"
     // HTTPヘッダーキー（Content-Type）

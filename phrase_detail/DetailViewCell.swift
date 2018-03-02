@@ -9,7 +9,11 @@
 import UIKit
 
 class DetailViewCell: UITableViewCell {
-
+   
+    @IBOutlet weak var phraseLabel: UILabel!
+    @IBOutlet weak var themeLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

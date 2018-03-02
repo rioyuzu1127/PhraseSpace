@@ -24,7 +24,7 @@ class ApiClient {
     }
     
     static func getPhrase(_ onSuccess: (Request) -> Void, _ onError: (Request) -> Void) {
-        let url = "http://192.168.1.12:8080/data/phrase?id=1"
+        let url = "http://192.168.1.13:8080/data/phrase?id=1"
         var request = Request(CommunicationType.get_Phrase, "GET", url, nil)
         if request.sendRequest() {
             onSuccess(request)

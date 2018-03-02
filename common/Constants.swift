@@ -14,7 +14,7 @@ enum PreferenceKey : String {
     
     case Phrase = "phrase"
     
-    case CategoryId = "category_id"
+    case Category = "category"
     
     case ID = "id"
     

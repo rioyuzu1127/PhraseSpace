@@ -71,6 +71,9 @@ extension PhraseTableViewController : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        PreferenceKey.Phrase.setValue(appDelegate.phraseList.phraseList[indexPath.row].phrase)
+        PreferenceKey.Category.setValue(appDelegate.phraseList.phraseList[indexPath.row].category)
+        PreferenceKey.OverView.setValue(appDelegate.phraseList.phraseList[indexPath.row].overView)
         let storyboard = UIStoryboard(name: "PhraseDetail", bundle: nil)
         let nextVC = storyboard.instantiateViewController(withIdentifier: "PhraseDetailViewController")
         self.present(nextVC, animated: true, completion: nil)
