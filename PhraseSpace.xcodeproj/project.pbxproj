@@ -31,9 +31,10 @@
 		1E3D42A22047070600F54EFA /* edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E3D429E2047070500F54EFA /* edit.png */; };
 		1E3D42A32047070600F54EFA /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E3D429F2047070600F54EFA /* search.png */; };
 		1E3D42A42047070600F54EFA /* reload.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E3D42A02047070600F54EFA /* reload.png */; };
-		1E3D42A620470C7300F54EFA /* PhraseDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3D42A520470C7300F54EFA /* PhraseDetailTableViewController.swift */; };
 		1E3D42A92048533700F54EFA /* DetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E3D42A72048533700F54EFA /* DetailViewCell.swift */; };
 		1E3D42AA2048533700F54EFA /* DetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E3D42A82048533700F54EFA /* DetailViewCell.xib */; };
+		1E428D6F204A67ED0012017C /* PhraseEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E428D6E204A67ED0012017C /* PhraseEditViewController.swift */; };
+		1E428D71204A682E0012017C /* PhraseEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E428D70204A682E0012017C /* PhraseEdit.storyboard */; };
 		1E45560D203337BC003D5CD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E45560C203337BC003D5CD2 /* AppDelegate.swift */; };
 		1E45560F203337BC003D5CD2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E45560E203337BC003D5CD2 /* BaseViewController.swift */; };
 		1E455614203337BC003D5CD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E455613203337BC003D5CD2 /* Assets.xcassets */; };
@@ -90,9 +91,10 @@
 		1E3D429E2047070500F54EFA /* edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = edit.png; path = ../../../Downloads/images/edit.png; sourceTree = "<group>"; };
 		1E3D429F2047070600F54EFA /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = search.png; path = ../../../Downloads/images/search.png; sourceTree = "<group>"; };
 		1E3D42A02047070600F54EFA /* reload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reload.png; path = ../../../Downloads/images/reload.png; sourceTree = "<group>"; };
-		1E3D42A520470C7300F54EFA /* PhraseDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseDetailTableViewController.swift; sourceTree = "<group>"; };
 		1E3D42A72048533700F54EFA /* DetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewCell.swift; sourceTree = "<group>"; };
 		1E3D42A82048533700F54EFA /* DetailViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewCell.xib; sourceTree = "<group>"; };
+		1E428D6E204A67ED0012017C /* PhraseEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseEditViewController.swift; sourceTree = "<group>"; };
+		1E428D70204A682E0012017C /* PhraseEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhraseEdit.storyboard; sourceTree = "<group>"; };
 		1E455609203337BC003D5CD2 /* PhraseSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhraseSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E45560C203337BC003D5CD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E45560E203337BC003D5CD2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -190,6 +192,15 @@
 			path = image;
 			sourceTree = "<group>";
 		};
+		1E428D6D204A67970012017C /* phrase_edit */ = {
+			isa = PBXGroup;
+			children = (
+				1E428D6E204A67ED0012017C /* PhraseEditViewController.swift */,
+				1E428D70204A682E0012017C /* PhraseEdit.storyboard */,
+			);
+			path = phrase_edit;
+			sourceTree = "<group>";
+		};
 		1E455600203337BC003D5CD2 = {
 			isa = PBXGroup;
 			children = (
@@ -199,8 +210,9 @@
 				1E172690203C3D4C008E3B81 /* splash */,
 				1E17268C203C2B16008E3B81 /* resource */,
 				1E45564120346CA5003D5CD2 /* global_menu */,
-				1E45563C203337DA003D5CD2 /* phrase_detail */,
 				1E45563B203337CF003D5CD2 /* phrase */,
+				1E45563C203337DA003D5CD2 /* phrase_detail */,
+				1E428D6D204A67970012017C /* phrase_edit */,
 				1E45563A203337C6003D5CD2 /* common */,
 				1E45560B203337BC003D5CD2 /* PhraseSpace */,
 				1E455620203337BC003D5CD2 /* PhraseSpaceTests */,
@@ -277,7 +289,6 @@
 			children = (
 				1E45564620346D30003D5CD2 /* PhraseDetailViewController.swift */,
 				1E45564820346D4A003D5CD2 /* PhraseDetail.storyboard */,
-				1E3D42A520470C7300F54EFA /* PhraseDetailTableViewController.swift */,
 				1E3D42A72048533700F54EFA /* DetailViewCell.swift */,
 				1E3D42A82048533700F54EFA /* DetailViewCell.xib */,
 			);
@@ -417,6 +428,7 @@
 				1E1726A920444727008E3B81 /* orangeCircle.png in Resources */,
 				1E3D42AA2048533700F54EFA /* DetailViewCell.xib in Resources */,
 				1E3D42A12047070600F54EFA /* delete.png in Resources */,
+				1E428D71204A682E0012017C /* PhraseEdit.storyboard in Resources */,
 				1E1726AA20444727008E3B81 /* yellowCircle.png in Resources */,
 				1E1726B020445BC4008E3B81 /* purpleCircle.png in Resources */,
 				1E172694203C3DB2008E3B81 /* Splash.storyboard in Resources */,
@@ -448,6 +460,7 @@
 				1E45560F203337BC003D5CD2 /* BaseViewController.swift in Sources */,
 				1E1726832039DF6C008E3B81 /* Request.swift in Sources */,
 				1E172697203C495B008E3B81 /* PhraseTableCell.swift in Sources */,
+				1E428D6F204A67ED0012017C /* PhraseEditViewController.swift in Sources */,
 				1E45563E203338AA003D5CD2 /* PhraseTableViewController.swift in Sources */,
 				1E172689203B2D64008E3B81 /* ApiClient.swift in Sources */,
 				1E45564320346CD7003D5CD2 /* MainTabBarController.swift in Sources */,
@@ -459,7 +472,6 @@
 				1E45564720346D30003D5CD2 /* PhraseDetailViewController.swift in Sources */,
 				1E1726852039E258008E3B81 /* Const.swift in Sources */,
 				1E3D42A92048533700F54EFA /* DetailViewCell.swift in Sources */,
-				1E3D42A620470C7300F54EFA /* PhraseDetailTableViewController.swift in Sources */,
 				1E172692203C3DA4008E3B81 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

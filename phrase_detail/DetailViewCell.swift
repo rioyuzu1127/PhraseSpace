@@ -8,15 +8,16 @@
 
 import UIKit
 
+
+
 class DetailViewCell: UITableViewCell {
    
     @IBOutlet weak var phraseLabel: UILabel!
     @IBOutlet weak var themeLabel: UILabel!
-    
+    @IBOutlet weak var toEditPage: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -24,5 +25,4 @@ class DetailViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }

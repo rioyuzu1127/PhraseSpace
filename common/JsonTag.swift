@@ -33,5 +33,8 @@ struct JsonTag {
      * 件数
      */
     static let Count : String = "count"
-    
+    /**
+     * 入力されたテキスト
+     */
+    static let Contents : String = "contents"
 }

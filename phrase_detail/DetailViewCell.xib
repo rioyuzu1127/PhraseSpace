@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhraseDetailViewController" customModule="PhraseSpace" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="DetailViewCell" customModule="PhraseSpace" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
@@ -38,6 +38,9 @@
                         <state key="normal" title="編集する">
                             <color key="titleColor" red="0.0" green="0.56808810763888884" blue="0.704833984375" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
+                        <connections>
+                            <action selector="toEditPage:" destination="-1" eventType="touchUpInside" id="vtx-Vw-yVU"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
@@ -54,6 +57,7 @@
             <connections>
                 <outlet property="phraseLabel" destination="Cph-KJ-WXW" id="16N-YK-f4O"/>
                 <outlet property="themeLabel" destination="DfP-H6-IUM" id="iBL-8n-fFq"/>
+                <outlet property="toEditPage" destination="0g1-AD-8UB" id="hre-cI-8LX"/>
             </connections>
         </tableViewCell>
     </objects>

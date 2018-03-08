@@ -111,6 +111,8 @@ class BaseViewController: UIViewController {
                     case .get_Phrase:
                         self.parsePhrase(jsonDic)
                         self.finishCallApi()
+                    case .update_Phrase:
+                        self.parsePhrase(jsonDic)
                     }
                 }
             } catch {

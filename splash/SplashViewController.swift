@@ -12,7 +12,7 @@ class SplashViewController : BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        callProcess()
+        callApi(CommunicationType.get_Phrase)
     }
     
     override func didReceiveMemoryWarning() {

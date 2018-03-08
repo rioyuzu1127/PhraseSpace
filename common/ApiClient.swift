@@ -18,14 +18,26 @@ class ApiClient {
         switch type {
         case CommunicationType.get_Phrase:
             getPhrase(onSuccess, onError)
+        case CommunicationType.update_Phrase:
+            updatePhrase(param!, onSuccess, onError)
         default:
             onError(nil)
         }
     }
     
     static func getPhrase(_ onSuccess: (Request) -> Void, _ onError: (Request) -> Void) {
-        let url = "http://192.168.1.13:8080/data/phrase?id=1"
+        let url = "http://192.168.1.6:8080/data/phrase?id=1"
         var request = Request(CommunicationType.get_Phrase, "GET", url, nil)
+        if request.sendRequest() {
+            onSuccess(request)
+        } else {
+            onError(request)
+        }
+    }
+    
+    static func updatePhrase(_ param:[String:Any], _ onSuccess: (Request) -> Void, _ onError: (Request) -> Void) {
+        let url = "http://192.168.1.6:8080/data/updatePhrase"
+        var request = Request(CommunicationType.update_Phrase, "POST", url, param)
         if request.sendRequest() {
             onSuccess(request)
         } else {

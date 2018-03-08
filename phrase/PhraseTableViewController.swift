@@ -15,15 +15,21 @@ class PhraseTableViewController : BaseViewController {
     @IBOutlet weak var emptyMessage: UIView!
     let appDelegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
     var phraseList : NSArray!
+    var indexpath : Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "PhraseTableCell", bundle: nil), forCellReuseIdentifier: "PhraseTableCell")
         self.tableView.separatorInset = UIEdgeInsets.zero
+        self.tableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
 }
@@ -71,13 +77,15 @@ extension PhraseTableViewController : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        PreferenceKey.Phrase.setValue(appDelegate.phraseList.phraseList[indexPath.row].phrase)
-        PreferenceKey.Category.setValue(appDelegate.phraseList.phraseList[indexPath.row].category)
-        PreferenceKey.OverView.setValue(appDelegate.phraseList.phraseList[indexPath.row].overView)
+//        self.childViewControllers.forEach {vc in
+//            if vc is PhraseDetailViewController {
+//                let pdv = vc as! PhraseDetailViewController
+//                pdv.row = indexPath.row
+//            }
+//        }
         let storyboard = UIStoryboard(name: "PhraseDetail", bundle: nil)
-        let nextVC = storyboard.instantiateViewController(withIdentifier: "PhraseDetailViewController")
-        self.present(nextVC, animated: true, completion: nil)
+        let detailVC = storyboard.instantiateViewController(withIdentifier: "PhraseDetailViewController") as! PhraseDetailViewController
+        detailVC.row = indexPath.row
+        present(detailVC, animated: true, completion: nil)
     }
-    
-    
 }

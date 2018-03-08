@@ -9,6 +9,8 @@
 import Foundation
 
 enum CommunicationType: Int {
-    // フレーズ取得
+    //フレーズ取得
     case get_Phrase
+    //フレーズ更新
+    case update_Phrase
 }
