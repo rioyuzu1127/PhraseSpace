@@ -29,23 +29,34 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b5P-76-DoO">
                                 <rect key="frame" x="0.0" y="35" width="320" height="37"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8t-34-wJ3">
-                                        <rect key="frame" x="15" y="9" width="25" height="25"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aMw-DE-eiE">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I8t-34-wJ3">
+                                                <rect key="frame" x="15" y="5" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="KPG-Hq-kY2"/>
+                                                    <constraint firstAttribute="width" secondItem="I8t-34-wJ3" secondAttribute="height" multiplier="1:1" id="tvp-Lj-6P8"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="delete.png"/>
+                                                <connections>
+                                                    <action selector="dismissView:" destination="gyI-lP-jEP" eventType="touchUpInside" id="09P-Q7-PNW"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="25" id="AsX-X4-gc7"/>
-                                            <constraint firstAttribute="width" constant="25" id="lbw-Mc-4UM"/>
+                                            <constraint firstItem="I8t-34-wJ3" firstAttribute="top" secondItem="aMw-DE-eiE" secondAttribute="top" constant="5" id="uWW-9G-gH3"/>
+                                            <constraint firstItem="I8t-34-wJ3" firstAttribute="leading" secondItem="aMw-DE-eiE" secondAttribute="leading" constant="15" id="wYW-I1-zXe"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="delete.png"/>
-                                        <connections>
-                                            <action selector="dismissView:" destination="gyI-lP-jEP" eventType="touchUpInside" id="09P-Q7-PNW"/>
-                                        </connections>
-                                    </button>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="I8t-34-wJ3" firstAttribute="top" secondItem="b5P-76-DoO" secondAttribute="top" constant="9" id="Cik-Zg-ce6"/>
                                     <constraint firstAttribute="width" secondItem="b5P-76-DoO" secondAttribute="height" multiplier="320:37" id="SsS-G3-yaV"/>
-                                    <constraint firstItem="I8t-34-wJ3" firstAttribute="leading" secondItem="b5P-76-DoO" secondAttribute="leading" constant="15" id="Wa0-WI-tiB"/>
+                                    <constraint firstItem="aMw-DE-eiE" firstAttribute="top" secondItem="b5P-76-DoO" secondAttribute="top" id="UDr-sI-lg0"/>
+                                    <constraint firstAttribute="bottom" secondItem="aMw-DE-eiE" secondAttribute="bottom" id="qF7-uA-nfy"/>
+                                    <constraint firstItem="aMw-DE-eiE" firstAttribute="leading" secondItem="b5P-76-DoO" secondAttribute="leading" id="xf9-7I-lbu"/>
+                                    <constraint firstAttribute="trailing" secondItem="aMw-DE-eiE" secondAttribute="trailing" id="zEt-96-3Mw"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Sp6-Nt-8is">
@@ -82,7 +93,8 @@
                         <viewLayoutGuide key="safeArea" id="4Ks-OH-mka"/>
                     </view>
                     <connections>
-                        <outlet property="naviView" destination="b5P-76-DoO" id="Wpb-eq-N90"/>
+                        <outlet property="baseView" destination="b5P-76-DoO" id="7sw-mS-kRo"/>
+                        <outlet property="naviView" destination="aMw-DE-eiE" id="bZL-kb-d3x"/>
                         <outlet property="tableView" destination="Sp6-Nt-8is" id="LbQ-oH-N2m"/>
                     </connections>
                 </viewController>

@@ -47,6 +47,13 @@
 		1E45564520346CEA003D5CD2 /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E45564420346CEA003D5CD2 /* MainTabBar.storyboard */; };
 		1E45564720346D30003D5CD2 /* PhraseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E45564620346D30003D5CD2 /* PhraseDetailViewController.swift */; };
 		1E45564920346D4A003D5CD2 /* PhraseDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E45564820346D4A003D5CD2 /* PhraseDetail.storyboard */; };
+		1EBB43792053F3C100CC2F9B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBB43782053F3C100CC2F9B /* ChatViewController.swift */; };
+		1EBB437B2053F55600CC2F9B /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EBB437A2053F55600CC2F9B /* Chat.storyboard */; };
+		1EBB437E2053FFA400CC2F9B /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBB437C2053FFA400CC2F9B /* MyTableViewCell.swift */; };
+		1EBB437F2053FFA400CC2F9B /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBB437D2053FFA400CC2F9B /* MyTableViewCell.xib */; };
+		1EBB43822053FFB400CC2F9B /* YourTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBB43802053FFB400CC2F9B /* YourTableViewCell.swift */; };
+		1EBB43832053FFB400CC2F9B /* YourTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBB43812053FFB400CC2F9B /* YourTableViewCell.xib */; };
+		1EBB43852054108E00CC2F9B /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBB43842054108E00CC2F9B /* Chat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +120,13 @@
 		1E45564420346CEA003D5CD2 /* MainTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabBar.storyboard; sourceTree = "<group>"; };
 		1E45564620346D30003D5CD2 /* PhraseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseDetailViewController.swift; sourceTree = "<group>"; };
 		1E45564820346D4A003D5CD2 /* PhraseDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhraseDetail.storyboard; sourceTree = "<group>"; };
+		1EBB43782053F3C100CC2F9B /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		1EBB437A2053F55600CC2F9B /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
+		1EBB437C2053FFA400CC2F9B /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		1EBB437D2053FFA400CC2F9B /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
+		1EBB43802053FFB400CC2F9B /* YourTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourTableViewCell.swift; sourceTree = "<group>"; };
+		1EBB43812053FFB400CC2F9B /* YourTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YourTableViewCell.xib; sourceTree = "<group>"; };
+		1EBB43842054108E00CC2F9B /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				1E17269A203C6771008E3B81 /* Phrase.swift */,
+				1EBB43842054108E00CC2F9B /* Chat.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -204,6 +219,7 @@
 		1E455600203337BC003D5CD2 = {
 			isa = PBXGroup;
 			children = (
+				1EBB43772053F38600CC2F9B /* chat */,
 				1E1726A020444706008E3B81 /* image */,
 				1E45560C203337BC003D5CD2 /* AppDelegate.swift */,
 				1E172699203C6733008E3B81 /* data */,
@@ -302,6 +318,19 @@
 				1E45564420346CEA003D5CD2 /* MainTabBar.storyboard */,
 			);
 			path = global_menu;
+			sourceTree = "<group>";
+		};
+		1EBB43772053F38600CC2F9B /* chat */ = {
+			isa = PBXGroup;
+			children = (
+				1EBB43782053F3C100CC2F9B /* ChatViewController.swift */,
+				1EBB437A2053F55600CC2F9B /* Chat.storyboard */,
+				1EBB437C2053FFA400CC2F9B /* MyTableViewCell.swift */,
+				1EBB437D2053FFA400CC2F9B /* MyTableViewCell.xib */,
+				1EBB43802053FFB400CC2F9B /* YourTableViewCell.swift */,
+				1EBB43812053FFB400CC2F9B /* YourTableViewCell.xib */,
+			);
+			path = chat;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,10 +448,13 @@
 				1E45564520346CEA003D5CD2 /* MainTabBar.storyboard in Resources */,
 				1E17268F203C2B5F008E3B81 /* PhraseSpace.png in Resources */,
 				1E1726AE20444738008E3B81 /* logo.png in Resources */,
+				1EBB43832053FFB400CC2F9B /* YourTableViewCell.xib in Resources */,
 				1E3D42A32047070600F54EFA /* search.png in Resources */,
 				1E455614203337BC003D5CD2 /* Assets.xcassets in Resources */,
+				1EBB437B2053F55600CC2F9B /* Chat.storyboard in Resources */,
 				1E1726A820444727008E3B81 /* redCircle.png in Resources */,
 				1E455640203338BE003D5CD2 /* PhraseTable.storyboard in Resources */,
+				1EBB437F2053FFA400CC2F9B /* MyTableViewCell.xib in Resources */,
 				1E172698203C495B008E3B81 /* PhraseTableCell.xib in Resources */,
 				1E3D42A22047070600F54EFA /* edit.png in Resources */,
 				1E1726A920444727008E3B81 /* orangeCircle.png in Resources */,
@@ -458,16 +490,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E45560F203337BC003D5CD2 /* BaseViewController.swift in Sources */,
+				1EBB43822053FFB400CC2F9B /* YourTableViewCell.swift in Sources */,
 				1E1726832039DF6C008E3B81 /* Request.swift in Sources */,
 				1E172697203C495B008E3B81 /* PhraseTableCell.swift in Sources */,
 				1E428D6F204A67ED0012017C /* PhraseEditViewController.swift in Sources */,
 				1E45563E203338AA003D5CD2 /* PhraseTableViewController.swift in Sources */,
+				1EBB437E2053FFA400CC2F9B /* MyTableViewCell.swift in Sources */,
 				1E172689203B2D64008E3B81 /* ApiClient.swift in Sources */,
 				1E45564320346CD7003D5CD2 /* MainTabBarController.swift in Sources */,
 				1E17269F203C7131008E3B81 /* JsonTag.swift in Sources */,
 				1E17269B203C6771008E3B81 /* Phrase.swift in Sources */,
 				1E17269D203C6CF2008E3B81 /* Constants.swift in Sources */,
 				1E17268B203B2E70008E3B81 /* CommunicationType.swift in Sources */,
+				1EBB43852054108E00CC2F9B /* Chat.swift in Sources */,
+				1EBB43792053F3C100CC2F9B /* ChatViewController.swift in Sources */,
 				1E45560D203337BC003D5CD2 /* AppDelegate.swift in Sources */,
 				1E45564720346D30003D5CD2 /* PhraseDetailViewController.swift in Sources */,
 				1E1726852039E258008E3B81 /* Const.swift in Sources */,

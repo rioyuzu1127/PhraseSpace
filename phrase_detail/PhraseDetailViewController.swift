@@ -10,16 +10,25 @@ import UIKit
 
 class PhraseDetailViewController : BaseViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var baseView: UIView!
     @IBOutlet weak var naviView: UIView!
     @IBOutlet weak var tableView: UITableView!
     let appDelegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
-    let phrase : String! = ""
     var row : Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.register(UINib(nibName: "DetailViewCell", bundle: nil), forCellReuseIdentifier: "DetailViewCell")
         self.tableView.estimatedRowHeight = 200
+        self.setView()
+    }
+    
+    func setView() {
+        baseView.backgroundColor = .black
+        baseView.alpha = 0.5
+        naviView.backgroundColor = .white
+        naviView.layer.cornerRadius = 10
+        naviView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
     
     override func didReceiveMemoryWarning() {
@@ -28,10 +37,12 @@ class PhraseDetailViewController : BaseViewController, UITableViewDelegate, UITa
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        tableView.reloadData()
     }
     
     @IBAction func dismissView(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        //self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     
@@ -39,7 +50,8 @@ class PhraseDetailViewController : BaseViewController, UITableViewDelegate, UITa
         let storyboard = UIStoryboard(name: "PhraseEdit", bundle: nil)
         let editVC = storyboard.instantiateViewController(withIdentifier: "PhraseEditViewController") as! PhraseEditViewController
         editVC.row = self.row
-        present(editVC, animated: true, completion: nil)
+        //present(editVC, animated: true, completion: nil)
+        self.navigationController?.pushViewController(editVC, animated: true)
     }
     
     

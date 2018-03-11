@@ -30,6 +30,7 @@ class PhraseTableViewController : BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        tableView.reloadData()
     }
     
 }
@@ -47,7 +48,6 @@ extension PhraseTableViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let phrase = appDelegate.phraseList.phraseList[indexPath.row]
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "PhraseTableCell", for: indexPath) as! PhraseTableCell
-        
         if phrase.category == "挨拶" {
             cell.categoryLabel.text = "挨拶"
             cell.categoryImage.image = UIImage(named:"greenCircle.png")
@@ -83,9 +83,11 @@ extension PhraseTableViewController : UITableViewDataSource {
 //                pdv.row = indexPath.row
 //            }
 //        }
+        PreferenceKey.PhraseId.setValue(appDelegate.phraseList.phraseList[indexPath.row].phraseId)
         let storyboard = UIStoryboard(name: "PhraseDetail", bundle: nil)
         let detailVC = storyboard.instantiateViewController(withIdentifier: "PhraseDetailViewController") as! PhraseDetailViewController
         detailVC.row = indexPath.row
-        present(detailVC, animated: true, completion: nil)
+        //present(detailVC, animated: true, completion: nil)
+        self.navigationController?.pushViewController(detailVC, animated: true)
     }
 }

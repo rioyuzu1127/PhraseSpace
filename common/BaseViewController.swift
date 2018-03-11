@@ -113,6 +113,8 @@ class BaseViewController: UIViewController {
                         self.finishCallApi()
                     case .update_Phrase:
                         self.parsePhrase(jsonDic)
+                    case .get_Chat:
+                        self.parseChat(jsonDic)
                     }
                 }
             } catch {
@@ -148,6 +150,30 @@ class BaseViewController: UIViewController {
                     let overview : String = data[JsonTag.Overview] as! String
                     phraseEntity.overView = overview
                     appDelegate.phraseList.phraseList.append(phraseEntity)
+                }
+            }
+        }
+    }
+    
+    func parseChat(_ jsonObject:NSDictionary) {
+        let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        let result: NSDictionary = jsonObject
+        appDelegate.chatList = ChatList()
+        if !(result[JsonTag.ChatList] == nil) {
+            let ChatList: NSArray = (result[JsonTag.ChatList] as? NSArray)!
+            if ChatList.count > 0 {
+                for jsonData in ChatList {
+                    let data: NSDictionary = jsonData as! NSDictionary
+                    let chatEntity = Chat()
+                    let chatId: Int64 = data[JsonTag.ChatId] as! Int64
+                    chatEntity.chatId = chatId
+                    let myId : Int64 = data[JsonTag.MyId] as! Int64
+                    chatEntity.myId = myId
+                    let talkContents : String = data[JsonTag.TalkContents] as! String
+                    chatEntity.talkContents = talkContents
+                    let opponentId : Int64 = data[JsonTag.OpponentId] as! Int64
+                    chatEntity.opponentId = opponentId
+                    appDelegate.chatList.chatList.append(chatEntity)
                 }
             }
         }

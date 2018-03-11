@@ -47,14 +47,16 @@ class PhraseEditViewController : BaseViewController {
     
     override func finishCallApi() {
         DispatchQueue.main.async {
-            let storyboard = UIStoryboard(name: "PhraseTable", bundle: nil)
-            let nextVC = storyboard.instantiateViewController(withIdentifier: "PhraseTableViewController")
-            self.present(nextVC, animated: true, completion: nil)
+            let storyboard = UIStoryboard(name: "PhraseDetail", bundle: nil)
+            let nextVC = storyboard.instantiateViewController(withIdentifier: "PhraseDetailViewController") as! PhraseDetailViewController
+            nextVC.row = self.row
+            //self.present(nextVC, animated: true, completion: nil)
+            self.navigationController?.popViewController(animated: true)
         }
     }
     
     @IBAction func cancelEditing(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
 }

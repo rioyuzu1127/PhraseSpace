@@ -37,4 +37,14 @@ struct JsonTag {
      * 入力されたテキスト
      */
     static let Contents : String = "contents"
+    
+    static let ChatId : String = "chatId"
+    
+    static let MyId : String = "myId"
+    
+    static let TalkContents : String = "talkContents"
+    
+    static let OpponentId : String = "opponentId"
+    
+    static let ChatList : String = "chatList"
 }

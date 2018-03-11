@@ -26,7 +26,7 @@ class ApiClient {
     }
     
     static func getPhrase(_ onSuccess: (Request) -> Void, _ onError: (Request) -> Void) {
-        let url = "http://192.168.1.6:8080/data/phrase?id=1"
+        let url = "http://192.168.1.4:8080/data/phrase?id=1"
         var request = Request(CommunicationType.get_Phrase, "GET", url, nil)
         if request.sendRequest() {
             onSuccess(request)
@@ -36,8 +36,18 @@ class ApiClient {
     }
     
     static func updatePhrase(_ param:[String:Any], _ onSuccess: (Request) -> Void, _ onError: (Request) -> Void) {
-        let url = "http://192.168.1.6:8080/data/updatePhrase"
+        let url = "http://192.168.1.4:8080/data/updatePhrase"
         var request = Request(CommunicationType.update_Phrase, "POST", url, param)
+        if request.sendRequest() {
+            onSuccess(request)
+        } else {
+            onError(request)
+        }
+    }
+    
+    static func getChat(_ onSuccess: (Request) -> Void, _ onError: (Request) -> Void) {
+        let url = "http://192.168.1.4:8080/data/chat?id=1&opponent=2"
+        var request = Request(CommunicationType.get_Phrase, "GET", url, nil)
         if request.sendRequest() {
             onSuccess(request)
         } else {
