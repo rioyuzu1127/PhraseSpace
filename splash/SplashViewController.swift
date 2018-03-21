@@ -21,7 +21,7 @@ class SplashViewController : BaseViewController {
     
     override func finishCallApi() {
         DispatchQueue.main.async {
-            self.showView(ViewId.phraseTable, animation: true)
+            self.showView(ViewId.globalMenu, animation: true)
         }
     }
 }

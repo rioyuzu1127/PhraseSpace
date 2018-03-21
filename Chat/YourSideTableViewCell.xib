@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="YourSide" rowHeight="75" id="MZX-tc-gV4" customClass="YourSideTableViewCell" customModule="PhraseSpace" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MZX-tc-gV4" id="1z0-fX-PMQ">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="74.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:11" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gbp-oj-VhI">
+                        <rect key="frame" x="263" y="49.5" width="30" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="あいうえおあいうえおあいうえおあいうえおあいうえお" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hv5-qa-SXj">
+                        <rect key="frame" x="50" y="8" width="206" height="59"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="206" id="qL4-6l-u6X"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="hv5-qa-SXj" secondAttribute="bottom" constant="8" id="7zT-22-PR1"/>
+                    <constraint firstItem="hv5-qa-SXj" firstAttribute="top" secondItem="1z0-fX-PMQ" secondAttribute="top" constant="8" id="HUc-wJ-m0n"/>
+                    <constraint firstItem="Gbp-oj-VhI" firstAttribute="leading" secondItem="hv5-qa-SXj" secondAttribute="trailing" constant="7" id="hac-7M-I1c"/>
+                    <constraint firstItem="hv5-qa-SXj" firstAttribute="leading" secondItem="1z0-fX-PMQ" secondAttribute="leading" constant="50" id="hw4-ko-LWo"/>
+                    <constraint firstAttribute="bottom" secondItem="Gbp-oj-VhI" secondAttribute="bottom" constant="8" id="sOW-GJ-Nrd"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="s8s-en-WpM"/>
+            <connections>
+                <outlet property="textview" destination="hv5-qa-SXj" id="Etu-qy-pED"/>
+                <outlet property="timeLabel" destination="Gbp-oj-VhI" id="qJl-Fq-ZEE"/>
+            </connections>
+            <point key="canvasLocation" x="93" y="-19.5"/>
+        </tableViewCell>
+    </objects>
+</document>

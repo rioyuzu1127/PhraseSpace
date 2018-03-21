@@ -1,15 +1,17 @@
 //
-//  MyTableViewCell.swift
+//  HeaderTableViewCell.swift
 //  PhraseSpace
 //
-//  Created by 井草俊輔 on 2018/03/10.
+//  Created by 井草俊輔 on 2018/03/22.
 //  Copyright © 2018年 井草俊輔. All rights reserved.
 //
 
 import UIKit
 
-class MyTableViewCell: UITableViewCell {
-
+class HeaderTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var phraseLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

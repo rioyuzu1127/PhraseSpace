@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MySide" rowHeight="75" id="vYh-gq-C0a" customClass="MySideTableViewCell" customModule="PhraseSpace" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vYh-gq-C0a" id="zvV-oD-rjZ">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="74.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Read" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Tb-eG-zJA">
+                        <rect key="frame" x="63" y="27.5" width="33" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:11" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAS-8T-VPX">
+                        <rect key="frame" x="66" y="46.5" width="30" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="あいうえおあいうえおあいうえおあいうえおあいうえお" translatesAutoresizingMaskIntoConstraints="NO" id="xmS-yQ-8YL">
+                        <rect key="frame" x="104" y="11" width="200" height="53"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="200" id="iht-8I-NGY"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name=".HiraKakuInterface-W3" family=".Hiragino Kaku Gothic Interface" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="xmS-yQ-8YL" firstAttribute="trailing" secondItem="zvV-oD-rjZ" secondAttribute="trailingMargin" id="TNN-Ms-4ZR"/>
+                    <constraint firstItem="xmS-yQ-8YL" firstAttribute="leading" secondItem="tAS-8T-VPX" secondAttribute="trailing" constant="8" id="WW3-7A-3La"/>
+                    <constraint firstItem="tAS-8T-VPX" firstAttribute="top" secondItem="1Tb-eG-zJA" secondAttribute="bottom" constant="2" id="kiO-oJ-Nue"/>
+                    <constraint firstItem="xmS-yQ-8YL" firstAttribute="top" secondItem="zvV-oD-rjZ" secondAttribute="topMargin" id="o6S-Mf-AdQ"/>
+                    <constraint firstItem="xmS-yQ-8YL" firstAttribute="leading" secondItem="1Tb-eG-zJA" secondAttribute="trailing" constant="8" id="qH1-JZ-gFh"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="xmS-yQ-8YL" secondAttribute="bottom" id="uqA-nK-PUi"/>
+                    <constraint firstItem="tAS-8T-VPX" firstAttribute="bottom" secondItem="xmS-yQ-8YL" secondAttribute="bottom" id="xrT-uG-NH3"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="UWl-R4-RQZ"/>
+            <connections>
+                <outlet property="readLabel" destination="1Tb-eG-zJA" id="xbm-JR-BLo"/>
+                <outlet property="textView" destination="xmS-yQ-8YL" id="uKN-bH-aKo"/>
+                <outlet property="timeLabel" destination="tAS-8T-VPX" id="Ugz-gf-xht"/>
+            </connections>
+            <point key="canvasLocation" x="-4" y="-3"/>
+        </tableViewCell>
+    </objects>
+</document>

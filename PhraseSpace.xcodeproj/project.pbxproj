@@ -47,13 +47,23 @@
 		1E45564520346CEA003D5CD2 /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E45564420346CEA003D5CD2 /* MainTabBar.storyboard */; };
 		1E45564720346D30003D5CD2 /* PhraseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E45564620346D30003D5CD2 /* PhraseDetailViewController.swift */; };
 		1E45564920346D4A003D5CD2 /* PhraseDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E45564820346D4A003D5CD2 /* PhraseDetail.storyboard */; };
-		1EBB43792053F3C100CC2F9B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBB43782053F3C100CC2F9B /* ChatViewController.swift */; };
-		1EBB437B2053F55600CC2F9B /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EBB437A2053F55600CC2F9B /* Chat.storyboard */; };
-		1EBB437E2053FFA400CC2F9B /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBB437C2053FFA400CC2F9B /* MyTableViewCell.swift */; };
-		1EBB437F2053FFA400CC2F9B /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBB437D2053FFA400CC2F9B /* MyTableViewCell.xib */; };
-		1EBB43822053FFB400CC2F9B /* YourTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBB43802053FFB400CC2F9B /* YourTableViewCell.swift */; };
-		1EBB43832053FFB400CC2F9B /* YourTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBB43812053FFB400CC2F9B /* YourTableViewCell.xib */; };
 		1EBB43852054108E00CC2F9B /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBB43842054108E00CC2F9B /* Chat.swift */; };
+		1EBB43C4205EC5CC00CC2F9B /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBB43C3205EC5CC00CC2F9B /* ChatRoomViewController.swift */; };
+		1EBB43C6205EC5DB00CC2F9B /* ChatRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EBB43C5205EC5DB00CC2F9B /* ChatRoom.storyboard */; };
+		1EBB43C8206223C800CC2F9B /* ChatRoomInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBB43C7206223C800CC2F9B /* ChatRoomInputView.swift */; };
+		1EBB43CA2062279C00CC2F9B /* ChatRoomInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBB43C92062279C00CC2F9B /* ChatRoomInputView.xib */; };
+		1EBB43CD20622B2B00CC2F9B /* MySideTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBB43CB20622B2B00CC2F9B /* MySideTableViewCell.swift */; };
+		1EBB43CE20622B2B00CC2F9B /* MySideTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBB43CC20622B2B00CC2F9B /* MySideTableViewCell.xib */; };
+		1EBB43D120622DC100CC2F9B /* YourSideTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBB43CF20622DC100CC2F9B /* YourSideTableViewCell.swift */; };
+		1EBB43D220622DC100CC2F9B /* YourSideTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBB43D020622DC100CC2F9B /* YourSideTableViewCell.xib */; };
+		1EBB43D5206261AF00CC2F9B /* ChatPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBB43D4206261AF00CC2F9B /* ChatPageViewController.swift */; };
+		1EBB43D72062620F00CC2F9B /* ChatPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EBB43D62062620F00CC2F9B /* ChatPage.storyboard */; };
+		1EBB43DA2062635600CC2F9B /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBB43D82062635600CC2F9B /* PersonTableViewCell.swift */; };
+		1EBB43DB2062635600CC2F9B /* PersonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBB43D92062635600CC2F9B /* PersonTableViewCell.xib */; };
+		1EBB43DE206295A300CC2F9B /* SelectPhraseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBB43DD206295A300CC2F9B /* SelectPhraseViewController.swift */; };
+		1EBB43E0206295B400CC2F9B /* SelectPhrase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EBB43DF206295B400CC2F9B /* SelectPhrase.storyboard */; };
+		1EBB43F52062BB5900CC2F9B /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBB43F32062BB5900CC2F9B /* HeaderTableViewCell.swift */; };
+		1EBB43F62062BB5900CC2F9B /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBB43F42062BB5900CC2F9B /* HeaderTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,13 +130,23 @@
 		1E45564420346CEA003D5CD2 /* MainTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabBar.storyboard; sourceTree = "<group>"; };
 		1E45564620346D30003D5CD2 /* PhraseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhraseDetailViewController.swift; sourceTree = "<group>"; };
 		1E45564820346D4A003D5CD2 /* PhraseDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PhraseDetail.storyboard; sourceTree = "<group>"; };
-		1EBB43782053F3C100CC2F9B /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		1EBB437A2053F55600CC2F9B /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
-		1EBB437C2053FFA400CC2F9B /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
-		1EBB437D2053FFA400CC2F9B /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
-		1EBB43802053FFB400CC2F9B /* YourTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourTableViewCell.swift; sourceTree = "<group>"; };
-		1EBB43812053FFB400CC2F9B /* YourTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YourTableViewCell.xib; sourceTree = "<group>"; };
 		1EBB43842054108E00CC2F9B /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		1EBB43C3205EC5CC00CC2F9B /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
+		1EBB43C5205EC5DB00CC2F9B /* ChatRoom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatRoom.storyboard; sourceTree = "<group>"; };
+		1EBB43C7206223C800CC2F9B /* ChatRoomInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomInputView.swift; sourceTree = "<group>"; };
+		1EBB43C92062279C00CC2F9B /* ChatRoomInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatRoomInputView.xib; sourceTree = "<group>"; };
+		1EBB43CB20622B2B00CC2F9B /* MySideTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySideTableViewCell.swift; sourceTree = "<group>"; };
+		1EBB43CC20622B2B00CC2F9B /* MySideTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MySideTableViewCell.xib; sourceTree = "<group>"; };
+		1EBB43CF20622DC100CC2F9B /* YourSideTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourSideTableViewCell.swift; sourceTree = "<group>"; };
+		1EBB43D020622DC100CC2F9B /* YourSideTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YourSideTableViewCell.xib; sourceTree = "<group>"; };
+		1EBB43D4206261AF00CC2F9B /* ChatPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPageViewController.swift; sourceTree = "<group>"; };
+		1EBB43D62062620F00CC2F9B /* ChatPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatPage.storyboard; sourceTree = "<group>"; };
+		1EBB43D82062635600CC2F9B /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
+		1EBB43D92062635600CC2F9B /* PersonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonTableViewCell.xib; sourceTree = "<group>"; };
+		1EBB43DD206295A300CC2F9B /* SelectPhraseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPhraseViewController.swift; sourceTree = "<group>"; };
+		1EBB43DF206295B400CC2F9B /* SelectPhrase.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectPhrase.storyboard; sourceTree = "<group>"; };
+		1EBB43F32062BB5900CC2F9B /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
+		1EBB43F42062BB5900CC2F9B /* HeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +177,7 @@
 		1E17268C203C2B16008E3B81 /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				1E1726A020444706008E3B81 /* image */,
 				1E17268D203C2B3A008E3B81 /* image */,
 			);
 			path = resource;
@@ -204,7 +225,8 @@
 				1E1726A320444727008E3B81 /* redCircle.png */,
 				1E1726A520444727008E3B81 /* yellowCircle.png */,
 			);
-			path = image;
+			name = image;
+			path = ../image;
 			sourceTree = "<group>";
 		};
 		1E428D6D204A67970012017C /* phrase_edit */ = {
@@ -219,8 +241,9 @@
 		1E455600203337BC003D5CD2 = {
 			isa = PBXGroup;
 			children = (
-				1EBB43772053F38600CC2F9B /* chat */,
-				1E1726A020444706008E3B81 /* image */,
+				1EBB43DC2062958300CC2F9B /* SelectPhrase */,
+				1EBB43D32062618B00CC2F9B /* ChatPage */,
+				1EBB43C2205EC0A200CC2F9B /* Chat */,
 				1E45560C203337BC003D5CD2 /* AppDelegate.swift */,
 				1E172699203C6733008E3B81 /* data */,
 				1E172690203C3D4C008E3B81 /* splash */,
@@ -320,17 +343,41 @@
 			path = global_menu;
 			sourceTree = "<group>";
 		};
-		1EBB43772053F38600CC2F9B /* chat */ = {
+		1EBB43C2205EC0A200CC2F9B /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				1EBB43782053F3C100CC2F9B /* ChatViewController.swift */,
-				1EBB437A2053F55600CC2F9B /* Chat.storyboard */,
-				1EBB437C2053FFA400CC2F9B /* MyTableViewCell.swift */,
-				1EBB437D2053FFA400CC2F9B /* MyTableViewCell.xib */,
-				1EBB43802053FFB400CC2F9B /* YourTableViewCell.swift */,
-				1EBB43812053FFB400CC2F9B /* YourTableViewCell.xib */,
+				1EBB43C3205EC5CC00CC2F9B /* ChatRoomViewController.swift */,
+				1EBB43C5205EC5DB00CC2F9B /* ChatRoom.storyboard */,
+				1EBB43C7206223C800CC2F9B /* ChatRoomInputView.swift */,
+				1EBB43C92062279C00CC2F9B /* ChatRoomInputView.xib */,
+				1EBB43CB20622B2B00CC2F9B /* MySideTableViewCell.swift */,
+				1EBB43CC20622B2B00CC2F9B /* MySideTableViewCell.xib */,
+				1EBB43CF20622DC100CC2F9B /* YourSideTableViewCell.swift */,
+				1EBB43D020622DC100CC2F9B /* YourSideTableViewCell.xib */,
+				1EBB43F32062BB5900CC2F9B /* HeaderTableViewCell.swift */,
+				1EBB43F42062BB5900CC2F9B /* HeaderTableViewCell.xib */,
 			);
-			path = chat;
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		1EBB43D32062618B00CC2F9B /* ChatPage */ = {
+			isa = PBXGroup;
+			children = (
+				1EBB43D4206261AF00CC2F9B /* ChatPageViewController.swift */,
+				1EBB43D62062620F00CC2F9B /* ChatPage.storyboard */,
+				1EBB43D82062635600CC2F9B /* PersonTableViewCell.swift */,
+				1EBB43D92062635600CC2F9B /* PersonTableViewCell.xib */,
+			);
+			path = ChatPage;
+			sourceTree = "<group>";
+		};
+		1EBB43DC2062958300CC2F9B /* SelectPhrase */ = {
+			isa = PBXGroup;
+			children = (
+				1EBB43DD206295A300CC2F9B /* SelectPhraseViewController.swift */,
+				1EBB43DF206295B400CC2F9B /* SelectPhrase.storyboard */,
+			);
+			path = SelectPhrase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -441,22 +488,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E1726A620444727008E3B81 /* blueCircle.png in Resources */,
+				1EBB43CE20622B2B00CC2F9B /* MySideTableViewCell.xib in Resources */,
 				1E45564920346D4A003D5CD2 /* PhraseDetail.storyboard in Resources */,
+				1EBB43D220622DC100CC2F9B /* YourSideTableViewCell.xib in Resources */,
 				1E1726A720444727008E3B81 /* greenCircle.png in Resources */,
 				1E455617203337BC003D5CD2 /* LaunchScreen.storyboard in Resources */,
 				1E3D42A42047070600F54EFA /* reload.png in Resources */,
 				1E45564520346CEA003D5CD2 /* MainTabBar.storyboard in Resources */,
 				1E17268F203C2B5F008E3B81 /* PhraseSpace.png in Resources */,
+				1EBB43C6205EC5DB00CC2F9B /* ChatRoom.storyboard in Resources */,
+				1EBB43DB2062635600CC2F9B /* PersonTableViewCell.xib in Resources */,
 				1E1726AE20444738008E3B81 /* logo.png in Resources */,
-				1EBB43832053FFB400CC2F9B /* YourTableViewCell.xib in Resources */,
 				1E3D42A32047070600F54EFA /* search.png in Resources */,
 				1E455614203337BC003D5CD2 /* Assets.xcassets in Resources */,
-				1EBB437B2053F55600CC2F9B /* Chat.storyboard in Resources */,
 				1E1726A820444727008E3B81 /* redCircle.png in Resources */,
+				1EBB43D72062620F00CC2F9B /* ChatPage.storyboard in Resources */,
 				1E455640203338BE003D5CD2 /* PhraseTable.storyboard in Resources */,
-				1EBB437F2053FFA400CC2F9B /* MyTableViewCell.xib in Resources */,
 				1E172698203C495B008E3B81 /* PhraseTableCell.xib in Resources */,
 				1E3D42A22047070600F54EFA /* edit.png in Resources */,
+				1EBB43E0206295B400CC2F9B /* SelectPhrase.storyboard in Resources */,
 				1E1726A920444727008E3B81 /* orangeCircle.png in Resources */,
 				1E3D42AA2048533700F54EFA /* DetailViewCell.xib in Resources */,
 				1E3D42A12047070600F54EFA /* delete.png in Resources */,
@@ -464,6 +514,8 @@
 				1E1726AA20444727008E3B81 /* yellowCircle.png in Resources */,
 				1E1726B020445BC4008E3B81 /* purpleCircle.png in Resources */,
 				1E172694203C3DB2008E3B81 /* Splash.storyboard in Resources */,
+				1EBB43CA2062279C00CC2F9B /* ChatRoomInputView.xib in Resources */,
+				1EBB43F62062BB5900CC2F9B /* HeaderTableViewCell.xib in Resources */,
 				1E1726AD20444738008E3B81 /* splash.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -490,12 +542,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E45560F203337BC003D5CD2 /* BaseViewController.swift in Sources */,
-				1EBB43822053FFB400CC2F9B /* YourTableViewCell.swift in Sources */,
+				1EBB43F52062BB5900CC2F9B /* HeaderTableViewCell.swift in Sources */,
 				1E1726832039DF6C008E3B81 /* Request.swift in Sources */,
+				1EBB43D120622DC100CC2F9B /* YourSideTableViewCell.swift in Sources */,
 				1E172697203C495B008E3B81 /* PhraseTableCell.swift in Sources */,
 				1E428D6F204A67ED0012017C /* PhraseEditViewController.swift in Sources */,
+				1EBB43DA2062635600CC2F9B /* PersonTableViewCell.swift in Sources */,
 				1E45563E203338AA003D5CD2 /* PhraseTableViewController.swift in Sources */,
-				1EBB437E2053FFA400CC2F9B /* MyTableViewCell.swift in Sources */,
 				1E172689203B2D64008E3B81 /* ApiClient.swift in Sources */,
 				1E45564320346CD7003D5CD2 /* MainTabBarController.swift in Sources */,
 				1E17269F203C7131008E3B81 /* JsonTag.swift in Sources */,
@@ -503,12 +556,16 @@
 				1E17269D203C6CF2008E3B81 /* Constants.swift in Sources */,
 				1E17268B203B2E70008E3B81 /* CommunicationType.swift in Sources */,
 				1EBB43852054108E00CC2F9B /* Chat.swift in Sources */,
-				1EBB43792053F3C100CC2F9B /* ChatViewController.swift in Sources */,
+				1EBB43D5206261AF00CC2F9B /* ChatPageViewController.swift in Sources */,
+				1EBB43C8206223C800CC2F9B /* ChatRoomInputView.swift in Sources */,
 				1E45560D203337BC003D5CD2 /* AppDelegate.swift in Sources */,
 				1E45564720346D30003D5CD2 /* PhraseDetailViewController.swift in Sources */,
+				1EBB43DE206295A300CC2F9B /* SelectPhraseViewController.swift in Sources */,
 				1E1726852039E258008E3B81 /* Const.swift in Sources */,
 				1E3D42A92048533700F54EFA /* DetailViewCell.swift in Sources */,
 				1E172692203C3DA4008E3B81 /* SplashViewController.swift in Sources */,
+				1EBB43CD20622B2B00CC2F9B /* MySideTableViewCell.swift in Sources */,
+				1EBB43C4205EC5CC00CC2F9B /* ChatRoomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

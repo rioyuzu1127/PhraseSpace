@@ -12,5 +12,15 @@ class MainTabBarController : UITabBarController, UITabBarControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.initIcon()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    func initIcon() {
+        self.viewControllers![0].tabBarItem.image = UIImage(named: "edit.png")
+        self.viewControllers![1].tabBarItem.image = UIImage(named: "reload.png")
     }
 }

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Select Phrase View Controller-->
+        <scene sceneID="Fou-bt-QTY">
+            <objects>
+                <viewController storyboardIdentifier="SelectPhraseViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AAY-lv-HAd" customClass="SelectPhraseViewController" customModule="PhraseSpace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qGF-lM-yIH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LQQ-cd-TbT">
+                                <rect key="frame" x="43.666666666666657" y="201" width="288" height="410"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Dp-c1-peX">
+                                        <rect key="frame" x="0.0" y="46" width="288" height="364"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="5Dp-c1-peX" secondAttribute="height" multiplier="72:91" id="cAf-5J-u1N"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="dataSource" destination="AAY-lv-HAd" id="Drn-QN-tsf"/>
+                                            <outlet property="delegate" destination="AAY-lv-HAd" id="SL6-uy-61i"/>
+                                        </connections>
+                                    </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8W-NY-9le">
+                                        <rect key="frame" x="19" y="8" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="avs-R9-iFU"/>
+                                            <constraint firstAttribute="width" constant="30" id="uhW-u2-ulN"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="delete.png"/>
+                                        <connections>
+                                            <action selector="dismissButton:" destination="AAY-lv-HAd" eventType="touchUpInside" id="kBU-Vw-PgC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="5Dp-c1-peX" secondAttribute="bottom" id="CQ8-Kk-PNh"/>
+                                    <constraint firstItem="u8W-NY-9le" firstAttribute="top" secondItem="LQQ-cd-TbT" secondAttribute="top" constant="8" id="DcF-wk-pzv"/>
+                                    <constraint firstAttribute="width" constant="288" id="IU0-mg-XVD"/>
+                                    <constraint firstItem="u8W-NY-9le" firstAttribute="leading" secondItem="LQQ-cd-TbT" secondAttribute="leading" constant="19" id="IvV-kG-cJ7"/>
+                                    <constraint firstAttribute="height" constant="410" id="LzL-wh-PyD"/>
+                                    <constraint firstAttribute="width" secondItem="LQQ-cd-TbT" secondAttribute="height" multiplier="144:205" id="crO-8f-O9P"/>
+                                    <constraint firstAttribute="trailing" secondItem="5Dp-c1-peX" secondAttribute="trailing" id="lXs-lW-ndq"/>
+                                    <constraint firstItem="5Dp-c1-peX" firstAttribute="leading" secondItem="LQQ-cd-TbT" secondAttribute="leading" id="ncM-tL-S6Z"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LQQ-cd-TbT" firstAttribute="centerY" secondItem="qGF-lM-yIH" secondAttribute="centerY" id="Awt-In-Gwf"/>
+                            <constraint firstItem="LQQ-cd-TbT" firstAttribute="centerX" secondItem="qGF-lM-yIH" secondAttribute="centerX" id="TU4-g9-QFY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Vy0-hs-Ts1"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="5Dp-c1-peX" id="xoF-1e-dgK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zT8-e9-46w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-154.40000000000001" y="-99.01477832512316"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="delete.png" width="50" height="50"/>
+    </resources>
+</document>

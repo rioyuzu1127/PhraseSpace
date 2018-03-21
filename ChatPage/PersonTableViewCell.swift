@@ -1,17 +1,22 @@
 //
-//  YourTableViewCell.swift
+//  PersonTableViewCell.swift
 //  PhraseSpace
 //
-//  Created by 井草俊輔 on 2018/03/10.
+//  Created by 井草俊輔 on 2018/03/21.
 //  Copyright © 2018年 井草俊輔. All rights reserved.
 //
 
 import UIKit
 
-class YourTableViewCell: UITableViewCell {
+class PersonTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var personImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        // 角丸にする
+        personImage.layer.cornerRadius = personImage.frame.size.width * 0.1
         // Initialization code
     }
 

@@ -1,48 +1,42 @@
 //
-//  PhraseTableViewController.swift
+//  SelectPhraseViewController.swift
 //  PhraseSpace
 //
-//  Created by 井草俊輔 on 2018/02/14.
+//  Created by 井草俊輔 on 2018/03/21.
 //  Copyright © 2018年 井草俊輔. All rights reserved.
 //
 
 import UIKit
 
-class PhraseTableViewController : BaseViewController {
-    
+class SelectPhraseViewController : BaseViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var emptyMessage: UIView!
     let appDelegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
-    var phraseList : NSArray!
-    var indexpath : Int!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "PhraseTableCell", bundle: nil), forCellReuseIdentifier: "PhraseTableCell")
-        self.tableView.separatorInset = UIEdgeInsets.zero
-        //self.tableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        tableView.reloadData()
+    @IBAction func dismissButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
 }
 
-extension PhraseTableViewController: UITableViewDelegate {
+extension SelectPhraseViewController : UITableViewDelegate {
     
 }
 
-extension PhraseTableViewController : UITableViewDataSource {
+extension SelectPhraseViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (appDelegate.phraseList?.phraseList.count)!
+        return appDelegate.phraseList.phraseList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -77,17 +71,10 @@ extension PhraseTableViewController : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        self.childViewControllers.forEach {vc in
-//            if vc is PhraseDetailViewController {
-//                let pdv = vc as! PhraseDetailViewController
-//                pdv.row = indexPath.row
-//            }
-//        }
-        PreferenceKey.PhraseId.setValue(appDelegate.phraseList.phraseList[indexPath.row].phraseId)
-        let storyboard = UIStoryboard(name: "PhraseDetail", bundle: nil)
-        let detailVC = storyboard.instantiateViewController(withIdentifier: "PhraseDetailViewController") as! PhraseDetailViewController
-        detailVC.row = indexPath.row
-        //present(detailVC, animated: true, completion: nil)
-        self.navigationController?.pushViewController(detailVC, animated: true)
+        let phrase = appDelegate.phraseList.phraseList[indexPath.row].phrase
+        let storyboard = UIStoryboard(name: "ChatRoom", bundle: nil)
+        let detailVC = storyboard.instantiateViewController(withIdentifier: "ChatRoomViewController") as! ChatRoomViewController
+        detailVC.text = phrase!
+        present(detailVC, animated: true, completion: nil)
     }
 }

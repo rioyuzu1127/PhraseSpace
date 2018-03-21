@@ -15,6 +15,7 @@ class BaseViewController: UIViewController {
         case globalMenu
         case phraseDetail
         case phraseTable
+        case chat
     }
     
     static func loadViewController(_ viewId: ViewId) -> UIViewController {
@@ -34,6 +35,9 @@ class BaseViewController: UIViewController {
         case .phraseTable:
             storyboardName = "PhraseTable"
             viewControllerName = "PhraseTableViewController"
+        case .chat:
+            storyboardName = "Chat"
+            viewControllerName = "ChatViewController"
         }
         
         let viewController = UIStoryboard(name: storyboardName, bundle: nil).instantiateViewController(withIdentifier: viewControllerName) as UIViewController
@@ -78,7 +82,13 @@ class BaseViewController: UIViewController {
             let storyboard = UIStoryboard(name: "PhraseTable", bundle: nil)
             let dstView = storyboard.instantiateViewController(withIdentifier: "PhraseTableViewController") as! PhraseTableViewController
             appDelegate.navigationController?.pushViewController(dstView, animated: false)
-        } else {
+        }
+//        else if viewId == .chat{
+//            let storyboard = UIStoryboard(name: "Chat", bundle: nil)
+//            let dstView = storyboard.instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController
+//            appDelegate.navigationController?.pushViewController(dstView, animated: false)
+//        }
+        else {
             let viewController = BaseViewController.loadViewController(viewId) as! BaseViewController
             viewController.viewId = viewId
             
@@ -94,7 +104,7 @@ class BaseViewController: UIViewController {
         print("callProcess")
         let queue = DispatchQueue(label: "communication", attributes: [])
         queue.async(execute: {
-            self.callApi(CommunicationType.get_Phrase)
+            self.callApi(CommunicationType.get_Chat)
         })
     }
     
@@ -110,11 +120,12 @@ class BaseViewController: UIViewController {
                     switch request!.accesstype {
                     case .get_Phrase:
                         self.parsePhrase(jsonDic)
-                        self.finishCallApi()
-                    case .update_Phrase:
-                        self.parsePhrase(jsonDic)
+                        self.callApi(CommunicationType.get_Chat)
                     case .get_Chat:
                         self.parseChat(jsonDic)
+                        self.finishCallApi()
+                    case .update_Phrase:
+                        self.finishCallApi()
                     }
                 }
             } catch {
@@ -165,8 +176,8 @@ class BaseViewController: UIViewController {
                 for jsonData in ChatList {
                     let data: NSDictionary = jsonData as! NSDictionary
                     let chatEntity = Chat()
-                    let chatId: Int64 = data[JsonTag.ChatId] as! Int64
-                    chatEntity.chatId = chatId
+//                    let chatId: Int64 = data[JsonTag.ChatId] as! Int64
+//                    chatEntity.chatId = chatId
                     let myId : Int64 = data[JsonTag.MyId] as! Int64
                     chatEntity.myId = myId
                     let talkContents : String = data[JsonTag.TalkContents] as! String
