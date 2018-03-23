@@ -8,13 +8,14 @@
 
 import UIKit
 
-class ChatRoomViewController : BaseViewController {
+class ChatRoomViewController : BaseViewController, UITextFieldDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     let appDelegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
     var text : String = "フレーズ"
     
     var bottomView: ChatRoomInputView! //画面下部に表示するテキストフィールドと送信ボタン
+    var chat : Chat!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +55,16 @@ class ChatRoomViewController : BaseViewController {
         let detailVC = storyboard.instantiateViewController(withIdentifier: "SelectPhraseViewController") as! SelectPhraseViewController
         present(detailVC, animated: true, completion: nil)
     }
+    
+    @IBAction func sendMessage(_ sender: Any) {
+        chat.myId = 1
+        chat.chatId = 3
+        chat.opponentId = 2
+        chat.talkContents = "Hello"
+        appDelegate.chatList.chatList.append(chat)
+        tableView.reloadData()
+    }
+    
     
 }
 

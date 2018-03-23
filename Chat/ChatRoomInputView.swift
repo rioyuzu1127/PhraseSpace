@@ -10,8 +10,8 @@ import UIKit
 
 class ChatRoomInputView: UIView {
     
-    @IBOutlet weak var chatTextField: UITextField!
     @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var textField: UITextField!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -28,5 +28,6 @@ class ChatRoomInputView: UIView {
         let view = nib.instantiate(withOwner: self, options: nil).first as! UIView
         self.addSubview(view)// Storyboardから読み込んだレイアウトでビューを重ねて表示
     }
+
 }
 
