@@ -50,8 +50,6 @@
 		1EBB43852054108E00CC2F9B /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBB43842054108E00CC2F9B /* Chat.swift */; };
 		1EBB43C4205EC5CC00CC2F9B /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBB43C3205EC5CC00CC2F9B /* ChatRoomViewController.swift */; };
 		1EBB43C6205EC5DB00CC2F9B /* ChatRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EBB43C5205EC5DB00CC2F9B /* ChatRoom.storyboard */; };
-		1EBB43C8206223C800CC2F9B /* ChatRoomInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBB43C7206223C800CC2F9B /* ChatRoomInputView.swift */; };
-		1EBB43CA2062279C00CC2F9B /* ChatRoomInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBB43C92062279C00CC2F9B /* ChatRoomInputView.xib */; };
 		1EBB43CD20622B2B00CC2F9B /* MySideTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBB43CB20622B2B00CC2F9B /* MySideTableViewCell.swift */; };
 		1EBB43CE20622B2B00CC2F9B /* MySideTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBB43CC20622B2B00CC2F9B /* MySideTableViewCell.xib */; };
 		1EBB43D120622DC100CC2F9B /* YourSideTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBB43CF20622DC100CC2F9B /* YourSideTableViewCell.swift */; };
@@ -64,6 +62,10 @@
 		1EBB43E0206295B400CC2F9B /* SelectPhrase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EBB43DF206295B400CC2F9B /* SelectPhrase.storyboard */; };
 		1EBB43F52062BB5900CC2F9B /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBB43F32062BB5900CC2F9B /* HeaderTableViewCell.swift */; };
 		1EBB43F62062BB5900CC2F9B /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBB43F42062BB5900CC2F9B /* HeaderTableViewCell.xib */; };
+		1EBB43FF2067A42600CC2F9B /* InputFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBB43FE2067A42600CC2F9B /* InputFieldView.swift */; };
+		1EBB44012067A67E00CC2F9B /* OnClickDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBB44002067A67E00CC2F9B /* OnClickDelegate.swift */; };
+		1EBB44032067A82E00CC2F9B /* InputFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBB44022067A82E00CC2F9B /* InputFieldView.xib */; };
+		1EBB44052067C9E000CC2F9B /* ChatBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBB44042067C9E000CC2F9B /* ChatBaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,8 +135,6 @@
 		1EBB43842054108E00CC2F9B /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		1EBB43C3205EC5CC00CC2F9B /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
 		1EBB43C5205EC5DB00CC2F9B /* ChatRoom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatRoom.storyboard; sourceTree = "<group>"; };
-		1EBB43C7206223C800CC2F9B /* ChatRoomInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomInputView.swift; sourceTree = "<group>"; };
-		1EBB43C92062279C00CC2F9B /* ChatRoomInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatRoomInputView.xib; sourceTree = "<group>"; };
 		1EBB43CB20622B2B00CC2F9B /* MySideTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySideTableViewCell.swift; sourceTree = "<group>"; };
 		1EBB43CC20622B2B00CC2F9B /* MySideTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MySideTableViewCell.xib; sourceTree = "<group>"; };
 		1EBB43CF20622DC100CC2F9B /* YourSideTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourSideTableViewCell.swift; sourceTree = "<group>"; };
@@ -147,6 +147,10 @@
 		1EBB43DF206295B400CC2F9B /* SelectPhrase.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectPhrase.storyboard; sourceTree = "<group>"; };
 		1EBB43F32062BB5900CC2F9B /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 		1EBB43F42062BB5900CC2F9B /* HeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTableViewCell.xib; sourceTree = "<group>"; };
+		1EBB43FE2067A42600CC2F9B /* InputFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldView.swift; sourceTree = "<group>"; };
+		1EBB44002067A67E00CC2F9B /* OnClickDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnClickDelegate.swift; sourceTree = "<group>"; };
+		1EBB44022067A82E00CC2F9B /* InputFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputFieldView.xib; sourceTree = "<group>"; };
+		1EBB44042067C9E000CC2F9B /* ChatBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +245,7 @@
 		1E455600203337BC003D5CD2 = {
 			isa = PBXGroup;
 			children = (
+				1EBB43FD2067A3F600CC2F9B /* Widget */,
 				1EBB43DC2062958300CC2F9B /* SelectPhrase */,
 				1EBB43D32062618B00CC2F9B /* ChatPage */,
 				1EBB43C2205EC0A200CC2F9B /* Chat */,
@@ -346,10 +351,9 @@
 		1EBB43C2205EC0A200CC2F9B /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				1EBB44042067C9E000CC2F9B /* ChatBaseViewController.swift */,
 				1EBB43C3205EC5CC00CC2F9B /* ChatRoomViewController.swift */,
 				1EBB43C5205EC5DB00CC2F9B /* ChatRoom.storyboard */,
-				1EBB43C7206223C800CC2F9B /* ChatRoomInputView.swift */,
-				1EBB43C92062279C00CC2F9B /* ChatRoomInputView.xib */,
 				1EBB43CB20622B2B00CC2F9B /* MySideTableViewCell.swift */,
 				1EBB43CC20622B2B00CC2F9B /* MySideTableViewCell.xib */,
 				1EBB43CF20622DC100CC2F9B /* YourSideTableViewCell.swift */,
@@ -378,6 +382,16 @@
 				1EBB43DF206295B400CC2F9B /* SelectPhrase.storyboard */,
 			);
 			path = SelectPhrase;
+			sourceTree = "<group>";
+		};
+		1EBB43FD2067A3F600CC2F9B /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				1EBB43FE2067A42600CC2F9B /* InputFieldView.swift */,
+				1EBB44022067A82E00CC2F9B /* InputFieldView.xib */,
+				1EBB44002067A67E00CC2F9B /* OnClickDelegate.swift */,
+			);
+			path = Widget;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -513,8 +527,8 @@
 				1E428D71204A682E0012017C /* PhraseEdit.storyboard in Resources */,
 				1E1726AA20444727008E3B81 /* yellowCircle.png in Resources */,
 				1E1726B020445BC4008E3B81 /* purpleCircle.png in Resources */,
+				1EBB44032067A82E00CC2F9B /* InputFieldView.xib in Resources */,
 				1E172694203C3DB2008E3B81 /* Splash.storyboard in Resources */,
-				1EBB43CA2062279C00CC2F9B /* ChatRoomInputView.xib in Resources */,
 				1EBB43F62062BB5900CC2F9B /* HeaderTableViewCell.xib in Resources */,
 				1E1726AD20444738008E3B81 /* splash.png in Resources */,
 			);
@@ -549,15 +563,17 @@
 				1E428D6F204A67ED0012017C /* PhraseEditViewController.swift in Sources */,
 				1EBB43DA2062635600CC2F9B /* PersonTableViewCell.swift in Sources */,
 				1E45563E203338AA003D5CD2 /* PhraseTableViewController.swift in Sources */,
+				1EBB43FF2067A42600CC2F9B /* InputFieldView.swift in Sources */,
 				1E172689203B2D64008E3B81 /* ApiClient.swift in Sources */,
 				1E45564320346CD7003D5CD2 /* MainTabBarController.swift in Sources */,
 				1E17269F203C7131008E3B81 /* JsonTag.swift in Sources */,
+				1EBB44012067A67E00CC2F9B /* OnClickDelegate.swift in Sources */,
+				1EBB44052067C9E000CC2F9B /* ChatBaseViewController.swift in Sources */,
 				1E17269B203C6771008E3B81 /* Phrase.swift in Sources */,
 				1E17269D203C6CF2008E3B81 /* Constants.swift in Sources */,
 				1E17268B203B2E70008E3B81 /* CommunicationType.swift in Sources */,
 				1EBB43852054108E00CC2F9B /* Chat.swift in Sources */,
 				1EBB43D5206261AF00CC2F9B /* ChatPageViewController.swift in Sources */,
-				1EBB43C8206223C800CC2F9B /* ChatRoomInputView.swift in Sources */,
 				1E45560D203337BC003D5CD2 /* AppDelegate.swift in Sources */,
 				1E45564720346D30003D5CD2 /* PhraseDetailViewController.swift in Sources */,
 				1EBB43DE206295A300CC2F9B /* SelectPhraseViewController.swift in Sources */,

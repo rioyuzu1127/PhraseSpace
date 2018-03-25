@@ -8,19 +8,20 @@
 
 import UIKit
 
-class HeaderTableViewCell: UITableViewCell {
+class HeaderTableViewCell: UIView {
     
-    @IBOutlet weak var phraseLabel: UILabel!
+    
+    @IBOutlet weak var textLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+//    override func setSelected(_ selected: Bool, animated: Bool) {
+//        super.setSelected(selected, animated: animated)
+//
+//        // Configure the view for the selected state
+//    }
     
 }
