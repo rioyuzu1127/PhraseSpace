@@ -13,6 +13,7 @@ class SplashViewController : BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         callApi(CommunicationType.get_Phrase)
+        PreferenceKey.tablePhrase.setValue("")
     }
     
     override func didReceiveMemoryWarning() {

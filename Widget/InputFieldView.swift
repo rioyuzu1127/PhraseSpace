@@ -8,8 +8,8 @@
 
 import UIKit
 
-protocol UpdateChatTableDelegate {
-    func updateChat()
+protocol UpdateChatTableDelegate : class {
+    func updateChat(_ text : String)
 }
 
 @IBDesignable class InputFieldView: UIView, UITextViewDelegate {
@@ -18,11 +18,12 @@ protocol UpdateChatTableDelegate {
     @IBOutlet weak var textView: UITextView!
     private var base: UIView?
     var delegate : UpdateChatTableDelegate?
+    var text : String = "Hello"
     
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-//        textView.delegate = self
+        textView.delegate = self
         customViewCommonInit()
     }
     
@@ -51,12 +52,9 @@ protocol UpdateChatTableDelegate {
     }
     
     @IBAction func clickAction(_ sender: AnyObject) {
-        delegate?.updateChat()
+        self.text = textView.text
+        delegate?.updateChat(self.text)
     }
-    
-//    func textViewDidEndEditing(_ textView: UITextView) {
-//        print(textView.text)
-//    }
     
 }
 

@@ -13,7 +13,6 @@ class SelectPhraseViewController : BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     let appDelegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "PhraseTableCell", bundle: nil), forCellReuseIdentifier: "PhraseTableCell")
@@ -24,7 +23,7 @@ class SelectPhraseViewController : BaseViewController {
     }
     
     @IBAction func dismissButton(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        appDelegate.navigationController?.popViewController(animated: true)
     }
     
 }
@@ -72,9 +71,7 @@ extension SelectPhraseViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let phrase = appDelegate.phraseList.phraseList[indexPath.row].phrase
-        let storyboard = UIStoryboard(name: "ChatRoom", bundle: nil)
-        let detailVC = storyboard.instantiateViewController(withIdentifier: "ChatRoomViewController") as! ChatRoomViewController
-        detailVC.text = phrase!
-        present(detailVC, animated: true, completion: nil)
+        PreferenceKey.tablePhrase.setValue(phrase)
+        appDelegate.navigationController?.popViewController(animated: true)
     }
 }

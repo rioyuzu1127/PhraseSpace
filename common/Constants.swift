@@ -20,6 +20,8 @@ enum PreferenceKey : String {
     
     case OverView = "overview"
     
+    case tablePhrase = "table_phrase"
+    
     func setValue(_ value: Any?) {
         UserDefaults.standard.set(value, forKey: self.rawValue)
         UserDefaults.standard.synchronize()

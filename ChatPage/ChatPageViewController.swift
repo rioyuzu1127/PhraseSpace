@@ -47,7 +47,9 @@ extension ChatPageViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "ChatRoom", bundle: nil)
         let detailVC = storyboard.instantiateViewController(withIdentifier: "ChatBaseViewController") as! ChatBaseViewController
-        present(detailVC, animated: true, completion: nil)
+        //appDelegate.navigationController?.present(detailVC, animated: true, completion: nil)
+        //present(detailVC, animated: true, completion: nil)
+        appDelegate.navigationController?.pushViewController(detailVC, animated: true)
     }
     
     

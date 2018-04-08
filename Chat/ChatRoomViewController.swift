@@ -8,16 +8,7 @@
 
 import UIKit
 
-class ChatRoomViewController : BaseViewController, UpdateChatTableDelegate {
-    
-    func updateChat() {
-        chat.myId = 1
-        chat.chatId = 3
-        chat.opponentId = 2
-        chat.talkContents = "Hello"
-        appDelegate.chatList.chatList.append(chat)
-        tableView.reloadData()
-    }
+class ChatRoomViewController : BaseViewController {
     
     
     var chat : Chat!
@@ -28,12 +19,9 @@ class ChatRoomViewController : BaseViewController, UpdateChatTableDelegate {
     
     @IBOutlet weak var textFfield: UITextView!
     @IBOutlet weak var sendButton: UIButton!
-    @IBOutlet weak var inputFieldView: InputFieldView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var input : InputFieldView = InputFieldView()
-        input.delegate = self
         setupUI()
     }
     
@@ -47,15 +35,7 @@ class ChatRoomViewController : BaseViewController, UpdateChatTableDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-    }
-    
-    
-    @IBAction func sendMessage(_ sender: Any) {
-        chat.chatId = 3
-        chat.myId = 1
-        chat.opponentId = 2
-        chat.talkContents = self.text
-        appDelegate.chatList.chatList.append(chat)
+        self.text = PreferenceKey.tablePhrase.getValue() as! String
         tableView.reloadData()
     }
     
@@ -123,12 +103,17 @@ extension ChatRoomViewController: UITableViewDataSource {
 
 extension ChatRoomViewController: UITableViewDelegate {
     
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return 40
-//    }
-//
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        <#code#>
-//    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
+    }
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let myView: UIView = UIView()
+        var label = UILabel()
+        label.text = PreferenceKey.tablePhrase.getValue() as! String
+        label.frame = CGRect(x:4,y:10,width:320,height:20)
+        myView.addSubview(label)
+        return myView
+    }
 
 }

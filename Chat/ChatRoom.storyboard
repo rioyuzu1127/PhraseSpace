@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qsh-Ak-Rx9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qsh-Ak-Rx9">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Chat Base View Controller-->
+        <!--ChatBaseViewController-->
         <scene sceneID="q6U-vf-Prk">
             <objects>
-                <viewController storyboardIdentifier="ChatBaseViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Qsh-Ak-Rx9" customClass="ChatBaseViewController" customModule="PhraseSpace" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatBaseViewController" title="ChatBaseViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Qsh-Ak-Rx9" customClass="ChatBaseViewController" customModule="PhraseSpace" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r9V-hs-pAR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,7 +75,7 @@
                         <viewLayoutGuide key="safeArea" id="zBd-os-eNU"/>
                     </view>
                     <connections>
-                        <outlet property="inputFieldView" destination="R1u-om-Bk1" id="bkF-sd-0Zv"/>
+                        <outlet property="inputFieldView" destination="R1u-om-Bk1" id="Mrf-3L-Nbg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="euH-Y4-rwX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -91,7 +91,7 @@
         <!--Chat Room View Controller-->
         <scene sceneID="jBK-j3-old">
             <objects>
-                <viewController id="Zq3-ny-9ow" customClass="ChatRoomViewController" customModule="PhraseSpace" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatRoomViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zq3-ny-9ow" customClass="ChatRoomViewController" customModule="PhraseSpace" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aE0-DI-21m">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="691"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
